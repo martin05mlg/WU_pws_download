@@ -1,9 +1,6 @@
 import pandas as pd
 import requests
-import feedparser
-import re
 from bs4 import BeautifulSoup
-import itertools
 import concurrent.futures
 
 
