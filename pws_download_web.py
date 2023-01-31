@@ -58,7 +58,7 @@ def download_data(pws):
             frames = [dataframe, month_table]
             dataframe = pd.concat(frames)
             
-            print(f"Station: {pws} completed at date {date}")
+            print(f"Weather Station: {pws} completed at date {date}")
         except:
             pass
         
@@ -69,7 +69,9 @@ def download_data(pws):
     
     dataframe.to_csv(f"{pws}.txt", sep="\t")
 
-download_data("ITOBED1")
+pwstodownload = input("ID from pws to download: ")
+
+download_data(pwstodownload)
 
 '''if __name__ == '__main__':    
     with concurrent.futures.ProcessPoolExecutor() as executor:
